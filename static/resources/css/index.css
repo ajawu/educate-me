@@ -7,7 +7,7 @@ html, body{
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: #777;
+    color: #555;
 }
 
 section {
@@ -23,7 +23,7 @@ h2 {
 	margin-bottom: 40px;
     text-transform: uppercase;
     font-weight: 300;
-    color: #666;
+    color: #555;
 }
 
 h2:after {
@@ -79,7 +79,6 @@ header {
     background-size: cover;
 	background-position: left;
     background-repeat: no-repeat;
-	background-attachment: fixed;
     height: 100vh;
     max-height: 769px;
     min-height: 750px;
@@ -149,24 +148,15 @@ header {
 }
 
 /* ----------------------------------------------- */
-/* ---------------- ABOUT SECTION ---------------- */
+/* -------------- CONTRIBUTE SECTION ------------- */
 /* ----------------------------------------------- */
-.long-copy {
-	line-height: 1.5;
-	width: 80%;
-	margin-left: 10%; /* centers content using remainder 30% evenly */
-	margin-right: 10%;
-	text-align: center; /* Adjusts it nicely in the center*/
-	margin-bottom: 30px;
-}
-
 .contribute-card {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 40px 15px;
     border-width: 1px;
     border-style: solid;
     border-image:
-    linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(246,246,246,1) 60%) 1 100%;
+    linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(238,238,238,1) 60%) 1 100%;
     border-right: transparent;
 }
 
@@ -190,9 +180,9 @@ header {
     text-transform: uppercase;
     font-size: 95%;
     padding-bottom: 10px;
-    border-bottom: 1px solid #f7f7f7;
+    border-bottom: 1px solid #eee;
     margin-bottom: 20px;
-    color: #666;
+    color: #555;
 }
 
 .contribute-description {
@@ -200,4 +190,32 @@ header {
     font-size: 85%;
     font-weight: 300;
     margin-bottom: 35px;
+}
+
+/* ----------------------------------------------- */
+/* -------------- ABOUT SECTION ------------- */
+/* ----------------------------------------------- */
+
+#goal-section {
+    border-bottom: 1px solid #f7f7f7;
+    background-color: #f4f4f4;
+    padding: 60px 0 !important;
+}
+
+.about-button {
+    border-radius: 10px !important;
+}
+
+.about-button:last-child {
+    margin-top: 15px;
+}
+
+.long-copy {
+	line-height: 1.5;
+	/*margin-left: 10%;*/
+	margin-right: 10%;
+	margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 95%;
+    text-align: justify;
 }
