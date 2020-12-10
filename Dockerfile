@@ -2,9 +2,9 @@ FROM python:3.8-alpine
 ADD ./requirements.txt /app/requirements.txt
 
 RUN set -ex \
-    && apk add --no-cache --virtual .build-deps gcc musl-dev postgresql-dev build-base \
+    && apk add --no-cache --virtual .build-deps libffi-dev libci-dev make openssl-dev python3-dev gcc musl-dev postgresql-dev build-base \
     && python -m venv /env \
-    && /env/bin/pip install --upgrade pip \
+    && /env/bin/pip install --                                                                                                  upgrade pip \
     && /env/bin/pip install --no-cache-dir -r /app/requirements.txt \
     && runDeps="$(scanelf --needed --nobanner --recursive /env \
         | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \

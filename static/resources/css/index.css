@@ -1,0 +1,203 @@
+/* ----------------------------------------------- */
+/* ----------------- GENERAL SETUP --------------- */
+/* ----------------------------------------------- */
+
+html, body{
+    scroll-behavior: smooth;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #777;
+}
+
+section {
+    padding: 80px 0 ;
+}
+
+/* ----------------- HEADINGS --------------- */
+
+h2 {
+	font-size: 130%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #666;
+}
+
+h2:after {
+	display: block;
+	height: 2px;
+	background-color: #89ABE3;
+	content: ""; /* Must have when using :after pseudo-class */
+	width: 120px;
+	margin: 20px auto 0; /* Center content */
+
+}
+
+/* ----------------------------------------------- */
+/* ---------------- HEADER SECTION --------------- */
+/* ----------------------------------------------- */
+
+.active-nav {
+    color: #89ABE3 !important;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    margin: 0 50px 0 0;
+	padding: 8px 0 !important;
+	color: white !important;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 85%;
+    letter-spacing: 2px;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+	border-bottom: 2px solid #89ABE3;
+}
+
+.site-logo {
+    height: 60px;
+    width: auto;
+    margin: 10px 0 10px 90px;
+}
+
+.nav-item:last-child {
+    margin-right: 120px;
+}
+
+header {
+    padding-bottom: 70px;
+    /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/educate-me-hero.jpg);*/
+    background-image: url(img/hero_image.jpg);
+    background-size: cover;
+	background-position: left;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    height: 100vh;
+    max-height: 769px;
+    min-height: 750px;
+}
+
+.hero-text-container {
+    padding-top: 60px;
+    /*margin: 120px 0 0 0;*/
+    /*width: 100%;*/
+    /*height: 100% !important;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+.hero-main-text {
+    color: #FCF6F5;
+    font-size: 210%;
+    font-weight: 300;
+    margin: 30px 0 15px;
+}
+
+.hero-sub-text {
+    font-size: 85%;
+    margin-bottom: 25px;
+    color: #FCF6F5;
+    font-weight: 500;
+}
+
+.hero-button:link,
+.hero-button:visited {
+    text-decoration: none;
+    border: 2px solid #89ABE3;
+    border-radius: 20px;
+    font-size: 90%;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+.hero-button-full:link,
+.hero-button-full:visited {
+    background-color: #89ABE3;
+    color: #FCF6F5;
+    margin-right: 10px;
+}
+
+.hero-button-full:hover,
+.hero-button-full:active {
+    text-decoration: none;
+    background-color: #608ed9;
+    border-color: #608ed9;
+}
+
+.hero-button-ghost:link,
+.hero-button-ghost:visited {
+    background-color: transparent;
+    color: #89ABE3;
+    border: 1px solid #89ABE3;
+}
+
+.hero-button-ghost:hover,
+.hero-button-ghost:active {
+    background-color: #89ABE3FF;
+    color: #FCF6F5;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- ABOUT SECTION ---------------- */
+/* ----------------------------------------------- */
+.long-copy {
+	line-height: 1.5;
+	width: 80%;
+	margin-left: 10%; /* centers content using remainder 30% evenly */
+	margin-right: 10%;
+	text-align: center; /* Adjusts it nicely in the center*/
+	margin-bottom: 30px;
+}
+
+.contribute-card {
+    margin-top: 10px;
+    padding: 40px 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-image:
+    linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(246,246,246,1) 60%) 1 100%;
+    border-right: transparent;
+}
+
+.contribute-card:first-child {
+    border-left: transparent;
+}
+
+.contribute-icon-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contribute-icon {
+    height: 55px;
+}
+
+.contribute-topic {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 95%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contribute-description {
+    text-align: justify;
+    font-size: 85%;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
