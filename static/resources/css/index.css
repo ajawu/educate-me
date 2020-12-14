@@ -328,7 +328,7 @@ header {
 /* ----------------------------------------------- */
 #testimonies-section {
     background-color: #f3f7fe;
-    padding: 80px 0 320px;
+    padding: 60px 0 310px;
 }
 
 .details-row {
@@ -515,6 +515,11 @@ header {
     width: auto;
 }
 
+.more-button-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
 /* ----------------------------------------------- */
 /* ---------------- FOOTER SECTION --------------- */
 /* ----------------------------------------------- */
@@ -579,8 +584,8 @@ footer {
 }
 
 .footer-section-box {
-    margin-top: 70px;
-    border-top: 1px solid #f7c33f;
+    margin-top: 40px;
+    /*border-top: 1px solid #f7c33f;*/
     padding: 20px 0;
 }
 
@@ -597,6 +602,44 @@ footer {
     margin-top: 20px;
 }
 
-.footer-links {
+.footer-section-title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 95%;
+}
 
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-links li a:link,
+.footer-links li a:visited {
+    color: #fff;
+    font-size: 70%;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover,
+.footer-links li a:active {
+    color: #f7c33f;
+    text-decoration: none;
+}
+
+.contact-item {
+    color: #fff;
+    text-align: left !important;
+    font-size: 75%;
+    margin-bottom: 15px !important;
+}
+.contact-icon {
+    font-size: 100%;
+    color: #f7c33f;
 }
