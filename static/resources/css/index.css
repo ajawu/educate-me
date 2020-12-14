@@ -11,7 +11,7 @@ Other text - #777777
 /* ----------------- GENERAL SETUP --------------- */
 /* ----------------------------------------------- */
 
-html, body{
+html, body {
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -20,28 +20,28 @@ html, body{
 }
 
 section {
-    padding: 80px 0 ;
+    padding: 80px 0;
 }
 
 /* ----------------- HEADINGS --------------- */
 
 h2 {
-	font-size: 130%;
-	word-spacing: 2px;
-	text-align: center;
-	margin-bottom: 40px;
+    font-size: 130%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
     text-transform: uppercase;
     font-weight: 300;
     color: #555;
 }
 
 h2:after {
-	display: block;
-	height: 2px;
-	background-color: #89ABE3;
-	content: ""; /* Must have when using :after pseudo-class */
-	width: 120px;
-	margin: 20px auto 0; /* Center content */
+    display: block;
+    height: 2px;
+    background-color: #89ABE3;
+    content: ""; /* Must have when using :after pseudo-class */
+    width: 120px;
+    margin: 20px auto 0; /* Center content */
 
 }
 
@@ -57,19 +57,19 @@ h2:after {
 .nav-link:visited {
     font-weight: 400;
     margin: 0 50px 0 0;
-	padding: 8px 0 !important;
-	color: white !important;
-	text-decoration: none;
-	text-transform: capitalize;
-	font-size: 85%;
+    padding: 8px 0 !important;
+    color: white !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 85%;
     letter-spacing: 2px;
-	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.2s, color 0.2s;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
 }
 
 .nav-link:hover,
 .nav-link:active {
-	border-bottom: 2px solid #f7c33f;
+    border-bottom: 2px solid #f7c33f;
     color: #f7c33f !important;
 }
 
@@ -78,13 +78,13 @@ h2:after {
     padding: 6px 30px !important;
     font-weight: 400;
     margin: 0 50px 0 0;
-	color: white !important;
-	text-decoration: none;
-	text-transform: capitalize;
-	font-size: 85%;
+    color: white !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 85%;
     letter-spacing: 2px;
-	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.2s, color 0.2s;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
 }
 
 .site-logo {
@@ -99,9 +99,9 @@ h2:after {
 
 header {
     padding-bottom: 70px;
-    background-image: linear-gradient(rgba(1,7,21,0.7), rgba(1,7,21,0.7)), url(img/hero-child-uniform.jpg);
+    background-image: linear-gradient(rgba(1, 7, 21, 0.7), rgba(1, 7, 21, 0.7)), url(img/hero-child-uniform.jpg);
     background-size: cover;
-	background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     max-height: 769px;
@@ -186,6 +186,7 @@ header {
 #contribute-section {
     background-color: #fff;
 }
+
 .contribute-card {
     margin-top: 15px;
     padding: 40px 20px 0;
@@ -280,10 +281,10 @@ header {
 }
 
 .long-copy {
-	line-height: 1.5;
-	/*margin-left: 10%;*/
-	margin-right: 10%;
-	margin-bottom: 30px;
+    line-height: 1.5;
+    /*margin-left: 10%;*/
+    margin-right: 10%;
+    margin-bottom: 30px;
     font-weight: 300;
     font-size: 95%;
     text-align: justify;
@@ -293,7 +294,7 @@ header {
 /* -------------- DONATIONS SECTION -------------- */
 /* ----------------------------------------------- */
 #donations-section {
-    background-color: rgb(6,34,101);
+    background-color: rgb(6, 34, 101);
 }
 
 .metric-value {
@@ -305,12 +306,12 @@ header {
 }
 
 .metric-value:after {
-	display: block;
-	height: 3px;
-	background-color: #f7c33f;
-	content: ""; /* Must have when using :after pseudo-class */
-	width: 40px;
-	margin: 2px auto 20px; /* Center content */
+    display: block;
+    height: 3px;
+    background-color: #f7c33f;
+    content: ""; /* Must have when using :after pseudo-class */
+    width: 40px;
+    margin: 2px auto 20px; /* Center content */
 
 }
 
@@ -354,7 +355,7 @@ header {
     top: 370px;
 }
 
-.middle-one{
+.middle-one {
     top: 350px;
 }
 
@@ -446,7 +447,7 @@ header {
     display: inline-block;
 }
 
-.right-metric-text-container  {
+.right-metric-text-container {
     margin: 0;
     width: 49%;
     text-align: right;
@@ -512,4 +513,90 @@ header {
 .cause-action-button img {
     height: 35px;
     width: auto;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- FOOTER SECTION --------------- */
+/* ----------------------------------------------- */
+footer {
+    padding: 50px 0 30px;
+    background-color: #062265;
+}
+
+.subscribe-form {
+    max-width: 540px;
+    width: 100%;
+}
+
+.footer-header {
+    color: #fff;
+    font-size: 140%;
+    margin-bottom: 0;
+}
+
+.fake-input {
+    display: block;
+    margin: 30px auto 0;
+    border: none;
+    padding: 5px 0 6px 13px;
+    width: 40%;
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 100px;
+
+}
+
+.subscribe-input {
+    border: none;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0;
+    padding-left: 7px;
+    width: 280px;
+    height: 20px;
+    font-size: 76%;
+    color: #666;
+}
+
+.subscribe-input:active,
+.subscribe-input:focus {
+    outline: none;
+}
+
+.subscribe-input::placeholder {
+    color: #777;
+}
+
+.subscribe-button {
+    background-color: #f7c33f;
+    border: none;
+    outline: none;
+    margin: 0;
+    color: #062265;
+    border-radius: 100px;
+    font-size: 80%;
+    padding: 4px 30px;
+}
+
+.footer-section-box {
+    margin-top: 70px;
+    border-top: 1px solid #f7c33f;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    height: auto;
+    width: 150px;
+    display: inline-block;
+    margin: 5px 0 10px -15px;
+}
+
+.footer-logo-text {
+    color: #ebebeb;
+    font-size: 70%;
+    margin-top: 20px;
+}
+
+.footer-links {
+
 }
