@@ -384,13 +384,132 @@ header {
 /* ---------------- CAUSES SECTION --------------- */
 /* ----------------------------------------------- */
 .cause-card {
-    margin-top: 60px;
-    box-shadow: 0px 5px 9.8px 0.2px rgba(85, 85, 85, 0.07)
+    margin-top: 40px;
+    box-shadow: 0px 5px 9.8px 0.2px rgba(85, 85, 85, 0.15)
+}
+
+.cause-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.cause-details-box {
+    padding: 0 30px;
 }
 
 .cause-title {
     color: #062265;
+    font-weight: 600;
+    font-size: 105%;
+    margin: 20px 0;
+    text-align: left;
+    line-height: 27px;
+}
+
+.progress-metric-container {
+    margin-bottom: 15px;
+}
+
+.progress-value {
+    width: 53px;
+    height: 22px;
+    background-color: #f7c33f;
+    text-align: center;
+    border: 1px solid #f7c33f;
+    left: 60%;
+    position: relative;
+    color: #062265;
+    opacity: 0.99;
+    font-weight: bold;
+    font-size: 12px;
+    top: -10px;
+    line-height: 20px;
+}
+
+.progress-value:before {
+    content: "";
+    border-color: #f7c33f transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.left-metric-text-container {
+    margin: 0;
+    width: 49%;
+    text-align: left;
+    display: inline-block;
+}
+
+.right-metric-text-container  {
+    margin: 0;
+    width: 49%;
+    text-align: right;
+    display: inline-block;
+}
+
+.focus {
+    font-weight: 600;
+    font-size: 74%;
+    color: #525252;
+}
+
+.normal {
+    font-size: 74%;
+    color: #525252;
+}
+
+.cause-metric-text {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+}
+
+.yellow-highlight {
+    color: #f7c33f;
     font-weight: 500;
-    font-size: 120%;
-    margin: 40px 0;
+    font-size: 150%;
+}
+
+.blue-highlight {
+    color: #062265;
+    font-weight: 500;
+    font-size: 80%;
+}
+
+.cause-metric-name {
+    color: #525252;
+    font-size: 90%;
+}
+
+.button-groups {
+    margin-top: 10px;
+    border-top: 1px solid #eeeeee;
+}
+
+.cause-details-button {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0;
+    color: #333333;
+    width: 40%;
+    font-size: 80%;
+}
+
+.cause-action-button {
+    display: inline-block;
+    text-align: center;
+    width: 18%;
+    border-left: 1px solid #eeeeee;
+    padding: 15px 0;
+}
+
+.cause-action-button img {
+    height: 35px;
+    width: auto;
 }
