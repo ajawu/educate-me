@@ -1,13 +1,22 @@
+/*
+Main Blue - #062265
+Main Yellow - #f7c33f
+Main Grey - #666
+grey background - #fcfcfc
+
+Other text - #777777
+*/
+
 /* ----------------------------------------------- */
 /* ----------------- GENERAL SETUP --------------- */
 /* ----------------------------------------------- */
 
 html, body{
     scroll-behavior: smooth;
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: #555;
+    color: #666;
 }
 
 section {
@@ -46,20 +55,36 @@ h2:after {
 
 .nav-link:link,
 .nav-link:visited {
+    font-weight: 400;
     margin: 0 50px 0 0;
 	padding: 8px 0 !important;
 	color: white !important;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-size: 85%;
     letter-spacing: 2px;
 	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.2s;
+	transition: border-bottom 0.2s, color 0.2s;
 }
 
 .nav-link:hover,
 .nav-link:active {
-	border-bottom: 2px solid #89ABE3;
+	border-bottom: 2px solid #f7c33f;
+    color: #f7c33f !important;
+}
+
+.login-button {
+    border-radius: 20px;
+    padding: 6px 30px !important;
+    font-weight: 400;
+    margin: 0 50px 0 0;
+	color: white !important;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 85%;
+    letter-spacing: 2px;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s, color 0.2s;
 }
 
 .site-logo {
@@ -74,90 +99,96 @@ h2:after {
 
 header {
     padding-bottom: 70px;
-    /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/educate-me-hero.jpg);*/
-    background-image: url(img/hero_image.jpg);
+    background-image: linear-gradient(rgba(1,7,21,0.7), rgba(1,7,21,0.7)), url(img/hero-child-uniform.jpg);
     background-size: cover;
-	background-position: left;
+	background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     max-height: 769px;
     min-height: 750px;
 }
 
+.position-container {
+    position: relative;
+}
+
 .hero-text-container {
-    padding-top: 60px;
-    /*margin: 120px 0 0 0;*/
-    /*width: 100%;*/
-    /*height: 100% !important;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(50%);
+    margin: 0;
+}
+
+.yellow-text {
+    color: #f7c33f;
+    font-weight: 500;
 }
 
 .hero-main-text {
     color: #FCF6F5;
-    font-size: 210%;
-    font-weight: 300;
-    margin: 30px 0 15px;
+    font-size: 270%;
+    font-weight: 400;
+    margin: 0 0 20px;
 }
 
 .hero-sub-text {
     font-size: 85%;
     margin-bottom: 25px;
     color: #FCF6F5;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .hero-button:link,
 .hero-button:visited {
     text-decoration: none;
-    border: 2px solid #89ABE3;
-    border-radius: 20px;
+    border: 2px solid #f7c33f;
+    border-radius: 5px;
     font-size: 90%;
     text-transform: capitalize;
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px 30px;
     font-weight: 500;
+    transition: color 0.3s, border 0.3s;
 }
 
 .hero-button-full:link,
 .hero-button-full:visited {
-    background-color: #89ABE3;
-    color: #FCF6F5;
-    margin-right: 10px;
+    background-color: #f7c33f;
+    color: #062265 !important;
+    margin-right: 15px;
 }
 
 .hero-button-full:hover,
 .hero-button-full:active {
+    background-color: #f6be2f;
+    color: #FCF6F5 !important;
     text-decoration: none;
-    background-color: #608ed9;
-    border-color: #608ed9;
 }
 
 .hero-button-ghost:link,
 .hero-button-ghost:visited {
     background-color: transparent;
-    color: #89ABE3;
-    border: 1px solid #89ABE3;
+    color: #FCF6F5;
+    border: 1px solid #FCF6F5;
 }
 
 .hero-button-ghost:hover,
 .hero-button-ghost:active {
-    background-color: #89ABE3FF;
+    background-color: #f6be2f;
     color: #FCF6F5;
+    text-decoration: none;
 }
 
 /* ----------------------------------------------- */
 /* -------------- CONTRIBUTE SECTION ------------- */
 /* ----------------------------------------------- */
+#contribute-section {
+    background-color: #fff;
+}
 .contribute-card {
     margin-top: 15px;
-    padding: 40px 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-image:
-    linear-gradient(0deg, rgba(255,255,255,1) 33%, rgba(238,238,238,1) 60%) 1 100%;
-    border-right: transparent;
+    padding: 40px 20px 0;
 }
 
 .contribute-card:first-child {
@@ -171,35 +202,73 @@ header {
 }
 
 .contribute-icon {
-    height: 55px;
+    height: 60px;
 }
 
 .contribute-topic {
     text-align: center;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 95%;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
-    color: #555;
+    font-weight: 500;
+    font-size: 110%;
+    margin: 20px 0;
+    color: #062265;
 }
 
 .contribute-description {
-    text-align: justify;
-    font-size: 85%;
-    font-weight: 300;
-    margin-bottom: 35px;
+    text-align: center;
+    font-size: 80%;
+    font-weight: 400;
+    color: #777777;
 }
 
 /* ----------------------------------------------- */
 /* -------------- ABOUT SECTION ------------- */
 /* ----------------------------------------------- */
 
-#goal-section {
-    border-bottom: 1px solid #f7f7f7;
-    background-color: #f4f4f4;
-    padding: 60px 0 !important;
+#about-section {
+    border-bottom: 1px solid #fff;
+    background-color: #f3f7fe;
+    padding: 100px 0;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-details-box {
+    padding: 100px 20px 0 0;
+}
+
+.section-title-small {
+    font-size: 87%;
+    font-weight: 500;
+    color: #f7c33f;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.section-title-big {
+    color: #062265;
+    font-weight: 600;
+    font-size: 180%;
+    /*line-height: 50px;*/
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.center-section {
+    width: 70%;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+.about-text {
+    font-size: 80%;
+    /*font-weight: 300;*/
 }
 
 .about-button {
@@ -218,4 +287,110 @@ header {
     font-weight: 300;
     font-size: 95%;
     text-align: justify;
+}
+
+/* ----------------------------------------------- */
+/* -------------- DONATIONS SECTION -------------- */
+/* ----------------------------------------------- */
+#donations-section {
+    background-color: rgb(6,34,101);
+}
+
+.metric-value {
+    color: #fcfcfc;
+    font-weight: 500;
+    font-size: 240%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.metric-value:after {
+	display: block;
+	height: 3px;
+	background-color: #f7c33f;
+	content: ""; /* Must have when using :after pseudo-class */
+	width: 40px;
+	margin: 2px auto 20px; /* Center content */
+
+}
+
+.metric-description {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 85%;
+    color: #fcfcfc;
+    text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* -------------- STUDENTS SECTION --------------- */
+/* ----------------------------------------------- */
+#testimonies-section {
+    background-color: #f3f7fe;
+    padding: 80px 0 320px;
+}
+
+.details-row {
+    margin-top: 40px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.student-details-container {
+    background-color: #fff;
+    padding: 20px 25px;
+    position: absolute;
+    top: 390px;
+    left: 40px;
+    z-index: 10;
+    width: 90%;
+    box-shadow: 0px 5px 9.8px 0.2px rgba(85, 85, 85, 0.07);
+}
+
+.last-one {
+    top: 370px;
+}
+
+.middle-one{
+    top: 350px;
+}
+
+.student-image {
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.student-name {
+    color: #062265;
+    font-weight: 500;
+    font-size: 120%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.student-details {
+    font-size: 75%;
+    text-align: right;
+    max-width: 100%;
+}
+
+/* ----------------------------------------------- */
+/* ---------------- CAUSES SECTION --------------- */
+/* ----------------------------------------------- */
+.cause-card {
+    margin-top: 60px;
+    box-shadow: 0px 5px 9.8px 0.2px rgba(85, 85, 85, 0.07)
+}
+
+.cause-title {
+    color: #062265;
+    font-weight: 500;
+    font-size: 120%;
+    margin: 40px 0;
 }

@@ -10,7 +10,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'resources/css/index.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <title>Educate Me</title>
 </head>
 <body>
@@ -26,59 +26,63 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link main-nav active-nav" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link main-nav" href="#about-section">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link main-nav" href="#">Our Work</a>
+                    <a class="nav-link main-nav" href="#causes-section">Causes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link main-nav" href="#">Goals</a>
+                    <a class="nav-link main-nav" href="#testimonies-section">Testimonies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link main-nav" href="#">Testimonies</a>
+                    <a class="nav-link main-nav" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="main-nav hero-button hero-button-full login-button" href="#">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
-            </div>
-            <div class="col-lg-5">
-                <div class="hero-text-container">
+            <div class="col-sm-6">
+                <div class="position-container">
+                    <div class="hero-text-container">
                     <h1 class="hero-main-text">
-                        In Nigeria: Wealth gaps deny many of the poorest the chance of an education
+                        Sponsor a Child to <span class="yellow-text">School</span>
                     </h1>
                     <p class="hero-sub-text">
-                        qualitative education without reference to the use of qualitative textbooks
-                        and other materials.
+                        In Nigeria: Wealth gaps deny many of the poorest the chance of an education.
                     </p>
                     <a href="#contribute-section" class="hero-button hero-button-full">How to Contribute</a>
                     <a href="#" class="hero-button hero-button-ghost">Learn More</a>
                 </div>
+                </div>
+            </div>
+             <div class="col-lg-6">
             </div>
         </div>
     </div>
 </header>
 
-<section id="goal-section">
+<section id="about-section">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h2 class="section-title">About Us</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-9">
-                <p class="long-copy">
-                    Hello, we’re Educate me an organisation with a goal to cut down the number of disadvantaged
-                    children due to access to educational materials in Nigeria by 2 million in the year 2022.
+            <div class="col-sm-6 about-details-box">
+                <h6 class="section-title-small">Who we are?</h6>
+                <h6 class="section-title-big">
+                    On a mission to give disadvantaged children education
+                </h6>
+                <p class="about-text">
+                    Hello, we’re Educate me an organisation with a goal to cut down the number of uneducated children
+                    in Nigeria by providing textbooks, stationary material and paying student tuition fees.
                 </p>
+{#                <a href="#" class="hero-button hero-button-full about-button">View Donations</a>#}
+{#                <a href="#" class="hero-button hero-button-ghost about-button">View Our Progress</a>#}
             </div>
-            <div class="col-sm-3">
-                <a href="#" class="hero-button hero-button-full about-button">View Donations</a>
-                <a href="#" class="hero-button hero-button-ghost about-button">View Our Progress</a>
+            <div class="col-sm-6">
+                <img src="{% static 'resources/images/about-complex.webp' %}" alt="about-image" class="about-image">
             </div>
         </div>
     </div>
@@ -88,7 +92,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2 class="section-title">How To Contribute</h2>
+                <h6 class="section-title-small center-section">How Can I Contribute?</h6>
+                <h6 class="section-title-big center-section">
+                    Ways to contribute are not limited to money
+                </h6>
             </div>
         </div>
         <div class="row">
@@ -96,57 +103,156 @@
                 {# hand, Money, Books, Voice #}
 				<!-- Adding icons -->
                 <div class="contribute-icon-container">
-                    <img src="{% static 'resources/images/community-blue.png' %}" alt="community-icon"
+                    <img src="{% static 'resources/images/community.png' %}" alt="community-icon"
                          class="contribute-icon">
                 </div>
 				<h4 class="contribute-topic">Volunteer</h4>
 				<p class="contribute-description">
-                    To reach our goal of assisting 5 million plus students in two years we need all hands on deck.
-                    You can help out by organising book drives in your locality, assist in book collation and tagging,
-                    assist in school inspection, resource distribution. Register today and find
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                 </p>
 			</div>
 			<div class="col-sm contribute-card">
 				<div class="contribute-icon-container">
-                    <img src="{% static 'resources/images/money-blue.png' %}" alt="community-icon"
+                    <img src="{% static 'resources/images/money.png' %}" alt="community-icon"
                          class="contribute-icon">
                 </div>
 				<h4 class="contribute-topic">Donate Money</h4>
 				<p class="contribute-description">
-                    To reach our goal of assisting 5 million plus students in two years we need all hands on deck.
-                    You can help out by organising book drives in your locality, assist in book collation and tagging,
-                    assist in school inspection, resource distribution. Register today and find
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                 </p>
 			</div>
 			<div class="col-sm contribute-card">
 				<div class="contribute-icon-container">
-                    <img src="{% static 'resources/images/book-blue.png' %}" alt="community-icon"
+                    <img src="{% static 'resources/images/book.png' %}" alt="community-icon"
                          class="contribute-icon">
                 </div>
 				<h4 class="contribute-topic">Donate Books</h4>
 				<p class="contribute-description">
-                    To reach our goal of assisting 5 million plus students in two years we need all hands on deck.
-                    You can help out by organising book drives in your locality, assist in book collation and tagging,
-                    assist in school inspection, resource distribution. Register today and find
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                 </p>
 			</div>
 			<div class="col-sm contribute-card">
 				<div class="contribute-icon-container">
-                    <img src="{% static 'resources/images/loupe-blue.png' %}" alt="loupe-icon"
+                    <img src="{% static 'resources/images/loupe.png' %}" alt="loupe-icon"
                          class="contribute-icon">
                 </div>
 				<h4 class="contribute-topic">Identify Needy</h4>
 				<p class="contribute-description">
-                    To reach our goal of assisting 5 million plus students in two years we need all hands on deck.
-                    You can help out by organising book drives in your locality, assist in book collation and tagging,
-                    assist in school inspection, resource distribution. Register today and find
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                 </p>
 			</div>
         </div>
         <div class="row">
-            <div class="col d-flex justify-content-center mt-1">
+            <div class="col d-flex justify-content-center mt-lg-5">
                 <a href="#" class="hero-button hero-button-full">Register & Contribute Now</a>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="donations-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="metric-value">1,000+</p>
+                <p class="metric-description">Books donated</p>
+            </div>
+            <div class="col-sm">
+                <p class="metric-value">100,000</p>
+                <p class="metric-description">Naira donated</p>
+            </div>
+            <div class="col-sm">
+                <p class="metric-value">200+</p>
+                <p class="metric-description">Students helped</p>
+            </div>
+            <div class="col-sm">
+                <p class="metric-value">10,000</p>
+                <p class="metric-description">Volunteer Hours</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonies-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h6 class="section-title-small center-section">Testimonies</h6>
+                <h6 class="section-title-big center-section">
+                    Some lives changed by your efforts
+                </h6>
+            </div>
+        </div>
+        <div class="row details-row">
+            <div class="col-sm-4">
+                <div class="image-container">
+                    <img src="{% static 'resources/images/child-brown-uniform-cropped.jpg' %}" alt="child-brown-uniform"
+                         class="student-image">
+                </div>
+                <div class="student-details-container">
+                    <p class="student-name">Okafor Chukwudi</p>
+                    <p class="student-details">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="image-container">
+                    <img src="{% static 'resources/images/child-red-uniform-cropped.jpg' %}" alt="child-red-uniform"
+                         class="student-image">
+                </div>
+                <div class="student-details-container last-one">
+                    <p class="student-name">Adeola Adetunji</p>
+                    <p class="student-details">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="image-container">
+                    <img src="{% static 'resources/images/girl-child-uniform.jpg' %}" alt="child-green-uniform"
+                         class="student-image">
+                </div>
+                <div class="student-details-container middle-one">
+                    <p class="student-name">Rashid Hauwa</p>
+                    <p class="student-details">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="causes-section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h6 class="section-title-small center-section">Causes</h6>
+                <h6 class="section-title-big center-section">
+                    Ongoing causes you can contribute to
+                </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="cause-card">
+                    <img src="{% static 'resources/images/girl-writing.png' %}" alt="girl-writing">
+                    <p class="cause-title">
+                        Establish School for Poor Children
+                    </p>
+
+                </div>
+            </div>
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
         </div>
     </div>
 </section>
