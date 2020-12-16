@@ -1,0 +1,71 @@
+{% extends 'account/auth_base.html' %}
+{% load static %}
+
+{% block title %}
+    Educate Me - Login
+{% endblock %}
+
+{% block form-title %}
+    Login to Educate Me
+{% endblock %}
+
+{% block form-body %}
+    <form class="mt-4" method="POST" action="{% url 'account_login' %}">
+        {% for key, value in form.errors.items %}
+            <p>{% if key != '__all__' %} {{ key }} {% endif %} {{ value }}</p>
+        {% endfor %}
+        {% csrf_token %}
+        <div class="mb-4">
+            <label for="id_login">Your Username/Email</label>
+            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                                </span>
+                <input type="text" class="form-control shadow-none" placeholder="Username or e-mail"
+                       name="login" autofocus required id="id_login">
+            </div>
+        </div>
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <!-- End of Form -->
+        <div class="form-group">
+            <!-- Form -->
+            <div class="form-group mb-4">
+                <label for="id_password">Your Password</label>
+                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon2">
+                                        <ion-icon name="lock-open-outline"></ion-icon>
+                                    </span>
+                    <input type="password" placeholder="Password" class="form-control shadow-none"
+                           required id="id_password" name="password">
+                </div>
+            </div>
+            <!-- End of Form -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value=""
+                           name="remember" id="id_remember">
+                    <label class="form-check-label" for="id_remember">
+                        Remember me
+                    </label>
+                </div>
+                <div>
+                    <a href="{% url 'account_reset_password' %}" class="small text-right password-reset">
+                        Forgot password?
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block submit-btn">
+            Sign in
+        </button>
+    </form>
+
+    <div class="d-flex justify-content-center align-items-center mt-4">
+                                <span class="font-weight-normal call-register">
+                                    Not registered?
+                                    <a href="{% url 'account_signup' %}" class="font-weight-bold">Create account</a>
+                                </span>
+    </div>
+{% endblock %}

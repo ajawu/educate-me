@@ -13,7 +13,7 @@ Other text - #777777
 
 html, body {
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #666;
@@ -128,15 +128,15 @@ header {
 .hero-main-text {
     color: #FCF6F5;
     font-size: 270%;
-    font-weight: 400;
+    font-weight: 500;
     margin: 0 0 20px;
 }
 
 .hero-sub-text {
-    font-size: 85%;
+    font-size: 88%;
     margin-bottom: 25px;
     color: #FCF6F5;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .hero-button:link,
@@ -217,8 +217,7 @@ header {
 .contribute-description {
     text-align: center;
     font-size: 80%;
-    font-weight: 400;
-    color: #777777;
+    font-weight: 500;
 }
 
 /* ----------------------------------------------- */
@@ -269,7 +268,7 @@ header {
 
 .about-text {
     font-size: 80%;
-    /*font-weight: 300;*/
+    font-weight: 500;
 }
 
 .about-button {

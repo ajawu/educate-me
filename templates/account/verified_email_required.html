@@ -1,0 +1,33 @@
+{% extends 'account/auth_base.html' %}
+{% load static %}
+
+{% block title %}
+    Educate Me - Email Verification
+{% endblock %}
+
+{% block form-title %}
+    Verify Your E-mail address
+{% endblock %}
+
+{% block form-body %}
+    <form class="mt-4" method="GET" action="{{ email_url }}">
+        <div class="mb-4">
+            <label for="id_login">
+                This part of the site requires us to verify that
+                you are who you claim to be. For this purpose, we require that you
+                verify ownership of your e-mail address.
+            </label><label for="id_login">
+                We have sent an e-mail to you for
+                verification. Please click on the link inside this e-mail. Please
+                contact us if you do not receive it within a few minutes.
+            </label>
+            <div class="mb-4 d-flex justify-content-center">
+                <ion-icon name="mail-outline" class="done-icon"></ion-icon>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block submit-btn">
+            Change your E-mail Address
+        </button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+/*
+Main Blue - #062265
+Main Yellow - #f7c33f
+Main Grey - #666
+blue background - #f3f7fe
+
+Other text - #777777
+*/
+
+/* ----------------------------------------------- */
+/* ----------------- GENERAL SETUP --------------- */
+/* ----------------------------------------------- */
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #666;
+}
+
+section {
+    padding: 80px 0;
+}
+
+
+#auth-form-section {
+    background-color: #F5F8FB;
+}
+
+.form-inner {
+    max-width: 550px !important;
+    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.07) !important;
+}
+
+.form-title {
+    color: #062265;
+    font-size: 140%;
+    font-weight: 600;
+}
+
+input.form-control:focus {
+    outline: none;
+    border: none;
+}
+
+.input-group-text {
+    border: none;
+    background-color: #fff;
+}
+
+.input-group {
+    border: 0.0625rem solid #d1d7e0;
+    border-radius: 10px;
+    padding: 0 2px 0 .75rem;
+    font-weight: 500;
+}
+
+label {
+    font-size: 82%;
+    font-weight: 600;
+    color: #4A5073;
+}
+
+.form-control {
+    border: none;
+    font-size: 75%;
+    padding-left: 0;
+    font-weight: 500;
+    color: #66799e;
+}
+
+.form-check-input {
+    margin-top: 0.5rem;
+}
+
+.input-group-text {
+    padding: 0 .75rem 0 0;
+}
+
+.password-reset:link,
+.password-reset:visited {
+    font-weight: 500;
+    font-size: 70%;
+    color: #062265;
+}
+
+.password-reset:hover,
+.password-reset:active {
+    color: #062265;
+}
+
+.call-register {
+    color: #4A5073;
+    font-size: 80%;
+}
+
+.font-weight-bold:link,
+.font-weight-bold:visited {
+    color: #062265;
+}
+
+.submit-btn {
+    text-decoration: none;
+    border: 2px solid #f7c33f;
+    border-radius: 5px;
+    font-size: 90%;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 500;
+    background-color: #f7c33f;
+    color: #062265 !important;
+}
+
+.submit-btn:hover {
+    background-color: #f6be2f;
+    color: #FCF6F5 !important;
+    text-decoration: none;
+}
+
+.errorlist {
+    margin: 0;
+    list-style: none;
+    font-size: 75%;
+    color: #ff0000;
+    padding: 0;
+}
+
+.done-icon {
+    color: #00CB64;
+    font-size: 500%;
+}
+
+.error-icon {
+    color: #ff0000;
+    font-size: 500%;
+}

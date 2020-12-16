@@ -10,7 +10,7 @@
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'resources/css/index.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <title>Educate Me</title>
 </head>
 <body>
@@ -36,10 +36,10 @@
                     <a class="nav-link main-nav" href="#testimonies-section">Testimonies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link main-nav" href="#">Contact Us</a>
+                    <a class="nav-link main-nav" href="{% url 'pledge_donations:contact_page' %}">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="main-nav hero-button hero-button-full login-button" href="#">Login</a>
+                    <a class="main-nav hero-button hero-button-full login-button" href="{% url 'account_login' %}">Login</a>
                 </li>
             </ul>
         </div>
@@ -145,7 +145,7 @@
         </div>
         <div class="row">
             <div class="col d-flex justify-content-center mt-lg-5">
-                <a href="#" class="hero-button hero-button-full">Register & Contribute Now</a>
+                <a href="{% url 'account_signup' %}" class="hero-button hero-button-full">Register & Contribute Now</a>
             </div>
         </div>
     </div>
