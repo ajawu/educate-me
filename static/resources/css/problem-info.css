@@ -1,0 +1,45 @@
+header {
+    padding-bottom: 70px;
+    background-image: linear-gradient(rgba(1, 7, 21, 0.7), rgba(1, 7, 21, 0.7)), url(img/hero-child-uniform.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: inherit;
+    max-height: none;
+    min-height: 10px;
+}
+
+.site-logo {
+    margin: 10px 0 10px 50px;
+}
+
+.nav-item:last-child {
+    margin-right: 50px;
+}
+
+.hero-main-text {
+    text-align: center;
+}
+
+.hero-sub-text {
+    text-align: center;
+    font-size: 105%;
+}
+
+.highlight-icon {
+    height: 220px;
+}
+
+.contribute-card {
+    text-align: center;
+}
+
+.about-text {
+    width: 80%;
+    text-align: justify;
+}
+
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}

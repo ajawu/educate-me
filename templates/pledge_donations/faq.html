@@ -16,7 +16,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand" href="{% url 'pledge_donations:landing' %}">
+        <a class="navbar-brand" href="{% url 'landing' %}">
             <img src="{% static 'resources/images/educate-logo-white-cropped.png' %}" alt="educate-me-logo"
                  class="site-logo">
         </a>
@@ -36,7 +36,7 @@
                     <a class="nav-link main-nav" href="#testimonies-section">Testimonies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link main-nav" href="{% url 'pledge_donations:contact' %}">Contact Us</a>
+                    <a class="nav-link main-nav" href="{% url 'contact' %}">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="main-nav hero-button hero-button-full login-button" href="{% url 'account_login' %}">Login</a>
@@ -56,7 +56,7 @@
                         In Nigeria: Wealth gaps deny many of the poorest the chance of an education.
                     </p>
                     <a href="#contribute-section" class="hero-button hero-button-full">How to Contribute</a>
-                    <a href="{% url 'pledge_donations:problem-statement' %}" class="hero-button hero-button-ghost">Learn More</a>
+                    <a href="#" class="hero-button hero-button-ghost">Learn More</a>
                 </div>
                 </div>
             </div>
@@ -78,6 +78,8 @@
                     Hello, we’re Educate me an organisation with a goal to cut down the number of uneducated children
                     in Nigeria by providing textbooks, stationary material and paying student tuition fees.
                 </p>
+{#                <a href="#" class="hero-button hero-button-full about-button">View Donations</a>#}
+{#                <a href="#" class="hero-button hero-button-ghost about-button">View Our Progress</a>#}
             </div>
             <div class="col-sm-6">
                 <img src="{% static 'resources/images/about-complex.webp' %}" alt="about-image" class="about-image">

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     'users.apps.UsersConfig',
+    'pledge_donations.apps.PledgeDonationsConfig',
     
     # 3rd Party Apps
     'allauth',
