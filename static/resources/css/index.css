@@ -416,7 +416,7 @@ header {
     background-color: #f7c33f;
     text-align: center;
     border: 1px solid #f7c33f;
-    left: 60%;
+    left: 50%;
     position: relative;
     color: #062265;
     opacity: 0.99;
@@ -527,39 +527,31 @@ footer {
     background-color: #062265;
 }
 
-.subscribe-form {
-    max-width: 540px;
-    width: 100%;
-}
-
 .footer-header {
     color: #fff;
     font-size: 140%;
     margin-bottom: 0;
 }
 
-.fake-input {
-    display: block;
-    margin: 30px auto 0;
-    border: none;
-    padding: 5px 0 6px 13px;
-    width: 40%;
-    max-width: 450px;
-    background-color: #fff;
-    border-radius: 100px;
+.subscribe-form {
+    max-width: 350px;
+    margin: 20px auto 0;
+}
 
+.subscribe-container {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 5px;
 }
 
 .subscribe-input {
     border: none;
     display: inline-block;
     background-color: #fff;
-    padding: 0;
-    padding-left: 7px;
-    width: 280px;
-    height: 20px;
-    font-size: 76%;
+    font-size: 80%;
     color: #666;
+    border-radius: 30px;
+    height: 36px;
 }
 
 .subscribe-input:active,
@@ -578,8 +570,9 @@ footer {
     margin: 0;
     color: #062265;
     border-radius: 100px;
-    font-size: 80%;
-    padding: 4px 30px;
+    font-size: 79%;
+    padding: 4px 25px;
+    height: 36px;
 }
 
 .footer-section-box {
@@ -635,7 +628,7 @@ footer {
 .contact-item {
     color: #fff;
     text-align: left !important;
-    font-size: 75%;
+    font-size: 70.2%;
     margin-bottom: 15px !important;
 }
 .contact-icon {

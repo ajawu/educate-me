@@ -402,7 +402,10 @@
         </div>
         <div class="row">
             <div class="col more-button-container">
-                <a href="#" class="hero-button hero-button-full more-causes-button">More Events</a>
+                <a href="{% url 'pledge_donations:event_list' %}"
+                   class="hero-button hero-button-full more-causes-button">
+                    More Events
+                </a>
             </div>
         </div>
     </div>
@@ -415,15 +418,16 @@
                 <h6 class="section-title-big center-section footer-header">
                     Subscribe to our Newsletter
                 </h6>
-                <div class="fake-input">
-                    <form action="" class="subscribe-form">
+                <form action="{% url 'pledge_donations:subscribe' %}" method="post" class="subscribe-form">
+                    {% csrf_token %}
+                    <div class="input-group subscribe-container">
                         <input type="email" name="email-field-newsletter" id="email-field-newsletter"
-                               class="subscribe-input" placeholder="Email Address">
-                        <button class="subscribe-button">
+                               class="form-control shadow-none subscribe-input" placeholder="Email Address" required>
+                        <button class="input-group-text subscribe-button">
                             Subscribe
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -439,27 +443,28 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="footer-section-box">
-                    <p class="footer-section-title" style="color: #062265">Navigation</p>
+                <div class="footer-section-box no-top">
+                    <p class="footer-section-title d-none d-md-block" style="color: #062265">Navigation</p>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="{% url 'pledge_donations:landing' %}">Home</a></li>
+                        <li><a href="{% url 'pledge_donations:landing' %}#about-section">About</a></li>
+                        <li><a href="{% url 'pledge_donations:faq' %}">FAQ's</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="footer-section-box">
-                    <p class="footer-section-title" style="color: #062265">.</p>
+                <div class="footer-section-box no-top">
+                    <p class="footer-section-title d-none d-md-block" style="color: #062265">.</p>
                     <ul class="footer-links">
-                        <li style="text-align: left"><a href="#">Events</a>
-                        <li style="text-align: left"><a href="#">Contact</a>
-                        <li style="text-align: left"><a href="#">Needed Book List</a></li>
+                        <li style="text-align: left"><a href="{% url 'pledge_donations:event_list' %}">Events</a>
+                        <li style="text-align: left"><a href="{% url 'pledge_donations:contact' %}">Contact</a>
+                        <li style="text-align: left"><a href="{% url 'pledge_donations:books_list' %}">Needed Book
+                            List</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="footer-section-box">
+                <div class="footer-section-box no-top">
                     <p class="footer-section-title">Contact Info</p>
                     <ul class="footer-links">
                         <li class="contact-item">
