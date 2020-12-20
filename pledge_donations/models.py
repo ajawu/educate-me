@@ -7,7 +7,7 @@ class Contact(models.Model):
     contact_email = models.EmailField(blank=False)
     message_title = models.CharField(max_length=200)
     message = models.TextField()
-    has_reached_out = models.BooleanField(default=False)
+    has_reached_out = models.BooleanField(default=False, blank=True)
 
 
 class Books(models.Model):

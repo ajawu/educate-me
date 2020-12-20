@@ -1,0 +1,21 @@
+.form-text {
+    color: #ff0000 !important;
+    font-weight: 500;
+    font-size: 70%;
+}
+
+label {
+    font-size: 87%;
+    font-weight: 500;
+    color: #062265;
+}
+
+.form-control {
+    font-size: 75%;
+    color: #666;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border: 1px solid #f7c33f;
+}

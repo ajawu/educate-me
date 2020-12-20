@@ -100,25 +100,6 @@ label {
     color: #062265;
 }
 
-.submit-btn {
-    text-decoration: none;
-    border: 2px solid #f7c33f;
-    border-radius: 5px;
-    font-size: 90%;
-    text-transform: capitalize;
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 500;
-    background-color: #f7c33f;
-    color: #062265 !important;
-}
-
-.submit-btn:hover {
-    background-color: #f6be2f;
-    color: #FCF6F5 !important;
-    text-decoration: none;
-}
-
 .errorlist {
     margin: 0;
     list-style: none;

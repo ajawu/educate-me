@@ -3,7 +3,7 @@
 
 {% block css-files %}
     <link rel="stylesheet" href="{% static 'resources/css/problem-info.css' %}">
-    <link rel="stylesheet" href="{% static 'resources/css/causes.css' %}">
+    <link rel="stylesheet" href="{% static 'resources/css/contact.css' %}">
 {% endblock %}
 
 
@@ -12,22 +12,63 @@
 {% endblock %}
 
 {% block page-heading %}
-    Upcoming/Ongoing <span class="yellow-text">Events</span>
+    Contact Us
 {% endblock %}
 
 {% block page-sub-heading %}
-    How can I donate?
+    Home / <span class="yellow-text">Contact</span>
 {% endblock %}
 
 {% block page-body %}
     <section id="causes-section">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h6 class="section-title-small center-section">Events</h6>
-                    <h6 class="section-title-big center-section">
-                        Ongoing events you can contribute to
+                <div class="col-6">
+                    <h6 class="section-title-small">Reach out to us</h6>
+                    <h6 class="section-title-big">
+                        Visit Our Physical Locations
                     </h6>
+                </div>
+                <div class="col-6">
+                    <form action="{% url 'pledge_donations:contact' %}" method="post" class="contact-form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <small id="emailHelp" class="form-text text-muted error-text">
+                                {{ form.non_field_errors }}
+                            </small>
+                            <label for="id_name">Full Name</label>
+                            <input type="text" class="form-control shadow-none" id="id_name" placeholder="Your Name"
+                                   name="contact_name">
+                            <small id="emailHelp" class="form-text text-muted">
+                                {{ form.contact_name.errors.as_text }}
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_email">Email Address</label>
+                            <input type="email" class="form-control shadow-none" id="id_email"
+                                   placeholder="Email" name="contact_email">
+                            <small id="emailHelp" class="form-text text-muted">
+                                {{ form.contact_email.errors.as_text }}
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_message_title">Message Title</label>
+                            <input type="text" class="form-control shadow-none" id="id_message_title"
+                                   name="message_title" placeholder="Title of your message">
+                            <small id="emailHelp" class="form-text text-muted">
+                                {{ form.message_title.errors.as_text }}
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_message">Message</label>
+                            <textarea name="message" rows="5" class="form-control shadow-none"
+                                      id="id_message" placeholder="Message you want to send"></textarea>
+                            <small id="emailHelp" class="form-text text-muted">
+                                {{ form.message.errors.as_text }}
+                            </small>
+                        </div>
+                        <button type="submit" class="btn btn-block submit-btn mt-4">Send Message</button>
+                    </form>
                 </div>
             </div>
             <div class="row">

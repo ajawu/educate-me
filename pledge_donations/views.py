@@ -20,10 +20,6 @@ class ContactView(CreateView):
     template_name = 'pledge_donations/contact.html'
     success_url = '/contact/success/'
 
-    def form_invalid(self, form):
-        return JsonResponse({'message': 'Errors occurred while saving form details',
-                             'errors': form.errors.as_json()}, status=400)
-
 
 class ContactSuccessView(TemplateView):
     template_name = 'account/contact_success.html'
