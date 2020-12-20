@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'resources/css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'resources/css/problem-info.css' %}">
-    <link rel="stylesheet" href="{% static 'resources/css/causes.css' %}">
+    {% block css-files %}{% endblock %}
     <link rel="stylesheet" href="{% static 'resources/css/queries.css' %}">
-    <title>Educate Me - Contact</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <title>{% block page-title %}{% endblock %}</title>
 </head>
 <body>
 <header>
@@ -49,95 +50,22 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <div class="col d-flex justify-content-center pt-5 flex-column align-content-center">
-                <h1 class="hero-main-text">
-                    Upcoming/Ongoing <span class="yellow-text">Events</span>
-                </h1>
-                <p class="hero-sub-text">
-                    How can I donate?
-                </p>
+        {% block page-header %}
+            <div class="row">
+                <div class="col d-flex justify-content-center pt-5 flex-column align-content-center">
+                    <h1 class="hero-main-text">
+                        {% block page-heading %}{% endblock %}
+                    </h1>
+                    <p class="hero-sub-text">
+                        {% block page-sub-heading %}{% endblock %}
+                    </p>
+                </div>
             </div>
-        </div>
+        {% endblock %}
     </div>
 </header>
 
-<section id="causes-section">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h6 class="section-title-small center-section">Events</h6>
-                <h6 class="section-title-big center-section">
-                    Ongoing events you can contribute to
-                </h6>
-            </div>
-        </div>
-        <div class="row">
-            {% for event in events %}
-                <div class="col-sm-4">
-                    <div class="cause-card">
-                        <img src="{% static 'resources/images/girl-writing.png' %}" alt="girl-writing"
-                             class="cause-image">
-                        <div class="cause-details-box">
-                            <p class="cause-title">
-                                {{ event.name }}
-                            </p>
-                            <div class="progress-metric-container">
-                                <div class="progress-value" style="left: {{ event.progress_position }}%">
-                                    <span>{{ event.donation_percentage }}</span>%
-                                </div>
-                                <div class="progress" style="height: 5px">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ event.donation_percentage }}%; font-size: 90%;
-                                                 background-color: #f7c33f;" aria-valuenow="50" aria-valuemin="0"
-                                         aria-valuemax="100">
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="left-metric-text-container ">
-                                        <span class="focus">Raised:</span>
-                                        <span class="normal">{{ event.amount_raised }}</span>
-                                    </p>
-                                    <p class="right-metric-text-container ">
-                                        <span class="focus">Goal:</span>
-                                        <span class="normal">{{ event.amount_goal }}</span>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="number-metrics">
-                                <p class="cause-metric-text">
-                                    <span class="yellow-highlight">{{ event.donated_books_count }}</span>
-                                    <span class="blue-highlight">/{{ event.donated_books_goal }}</span> <br>
-                                    <span class="cause-metric-name">Books</span>
-                                </p>
-                                <p class="cause-metric-text">
-                                    <span class="yellow-highlight">{{ event.volunteers_count }}</span>
-                                    <span class="blue-highlight">/{{ event.volunteer_goal }}</span> <br>
-                                    <span class="cause-metric-name">Volunteers</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="button-groups">
-                            <a href="{% url 'pledge_donations:event_details' event.slug %}"
-                               class="cause-details-button">Learn More</a>
-                            <a href="#" class="cause-action-button">
-                                <img src="{% static 'resources/images/money.png' %}" alt="books">
-                            </a>
-                            <a href="#" class="cause-action-button">
-                                <img src="{% static 'resources/images/book.png' %}" alt="books">
-                            </a>
-                            <a href="#" class="cause-action-button">
-                                <img src="{% static 'resources/images/community.png' %}" alt="books">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
+{% block page-body %}{% endblock %}
 
 <footer id="footer-section">
     <div class="container">
@@ -221,6 +149,5 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous">
 </script>
-<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </body>
 </html>

@@ -11,34 +11,32 @@ class LandingPageView(TemplateView):
     template_name = 'pledge_donations/index.html'
 
 
-class TesterView(TemplateView):
-    template_name = 'account/password_reset_done.html'
-
-
-class FaqView(TemplateView):
-    template_name = 'pledge_donations/faq.html'
+class ProblemStatementView(TemplateView):
+    template_name = 'pledge_donations/problem-statement.html'
 
 
 class ContactView(CreateView):
     form_class = ContactForm
     template_name = 'pledge_donations/contact.html'
-
-    def form_valid(self, form):
-        return JsonResponse({'message': 'Message saved successfully. We will get back to you'}, status=202)
+    success_url = '/contact/success/'
 
     def form_invalid(self, form):
         return JsonResponse({'message': 'Errors occurred while saving form details',
                              'errors': form.errors.as_json()}, status=400)
 
 
-class ProblemStatementView(TemplateView):
-    template_name = 'pledge_donations/problem-statement.html'
+class ContactSuccessView(TemplateView):
+    template_name = 'account/contact_success.html'
+
+
+class FaqView(TemplateView):
+    template_name = 'pledge_donations/faq.html'
 
 
 class EventListView(ListView):
     model = Event
     paginate_by = 9
-    template_name = 'pledge_donations/events_list.html'
+    template_name = 'pledge_donations/event_list.html'
     context_object_name = 'events'
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -57,7 +55,7 @@ class EventListView(ListView):
                 'volunteers_count': event.volunteers.count(),
                 'volunteer_goal': event.volunteer_goal,
                 'donation_percentage': (event.donation_amount / event.donation_goal) * 100,
-                'progress_position': ((event.donation_amount / event.donation_goal) * 100) - 10,
+                'progress_position': ((event.donation_amount / event.donation_goal) * 100) - 5,
             })
 
         context['events'] = event_breakdown
@@ -65,17 +63,14 @@ class EventListView(ListView):
 
 
 class EventDetail(DetailView):
-    model = ''
-    template_name = ''
+    model = Event
+    template_name = 'pledge_donations/event_detail.html'
+    context_object_name = 'event'
 
 
 class BooksList(ListView):
     model = ''
     template_name = ''
-
-
-class SubscriptionSuccessView(TemplateView):
-    template_name = 'account/subscription_successful.html'
 
 
 class SubscribeView(CreateView):
@@ -89,3 +84,11 @@ class SubscribeView(CreateView):
     def form_invalid(self, form):
         return JsonResponse({'message': 'Error occurred while processing input',
                              'errors': form.errors.as_json()}, status=400)
+
+
+class SubscriptionSuccessView(TemplateView):
+    template_name = 'account/subscription_successful.html'
+
+
+class TesterView(TemplateView):
+    template_name = 'account/password_reset_done.html'
