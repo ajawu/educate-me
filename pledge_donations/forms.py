@@ -18,7 +18,9 @@ class SubscribeForm(forms.ModelForm):
 
     def send_email(self):
         # TODO: optimise to use celery
-        send_mail(subject='Educate-Me Newsletter Subscription',
-                  message='Hey, \nYourEmail was just subscribed to educate-Me\'s Newsletter.',
+        send_mail(subject='Educate-Me Newsletter Subscription Registration',
+                  message='Welcome to educate-Me\'s Newsletter. \n Your email address will never be shared with any '
+                          'other organisations. You can unsubscribe anytime from your account dashboard.'
+                          'We hope you don\'t though :)',
                   from_email=settings.DEFAULT_FROM_EMAIL,
-                  recipient_list=[self.email])
+                  recipient_list=[self.cleaned_data['email']])

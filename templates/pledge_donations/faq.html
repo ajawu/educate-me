@@ -148,7 +148,7 @@
                 <form action="{% url 'pledge_donations:subscribe' %}" method="post" class="subscribe-form">
                     {% csrf_token %}
                     <div class="input-group subscribe-container">
-                        <input type="email" name="email-field-newsletter" id="email-field-newsletter"
+                        <input type="email" name="email" id="email-field-newsletter"
                                class="form-control shadow-none subscribe-input" placeholder="Email Address" required>
                         <button class="input-group-text subscribe-button">
                             Subscribe

@@ -1,0 +1,21 @@
+{% extends 'account/auth_base.html' %}
+{% load static %}
+
+{% block title %}
+    Educate Me - Subscription
+{% endblock %}
+
+{% block form-title %}
+    Email address added to newsletter
+{% endblock %}
+
+{% block form-body %}
+    <form class="mt-4" method="GET" action="{% url 'pledge_donations:landing' %}">
+        <div class="mb-4 d-flex justify-content-center">
+            <ion-icon name="checkmark-done-outline" class="done-icon"></ion-icon>
+        </div>
+        <button type="submit" class="btn btn-block submit-btn">
+            Go To Home Page
+        </button>
+    </form>
+{% endblock %}

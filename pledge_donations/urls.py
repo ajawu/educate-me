@@ -11,6 +11,7 @@ urlpatterns = [
     path('subscribe/', views.SubscribeView.as_view(), name='subscribe'),
     path('event/', views.EventListView.as_view(), name='event_list'),
     path('books/', views.EventListView.as_view(), name='books_list'),
+    path('subscription/success/', views.SubscriptionSuccessView.as_view(), name='subscription_successful'),
     path('event/<slug:event_slug>/', views.SubscribeView.as_view(), name='event_details'),
     # path('test', views.TesterView.as_view(), name='tester_page'),
 ]

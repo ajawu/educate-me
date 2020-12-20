@@ -74,16 +74,17 @@ class BooksList(ListView):
     template_name = ''
 
 
+class SubscriptionSuccessView(TemplateView):
+    template_name = 'account/subscription_successful.html'
+
+
 class SubscribeView(CreateView):
     form_class = SubscribeForm
-
-    def send_email(self, email_address):
-        pass
+    success_url = '/subscription/success/'
 
     def form_valid(self, form):
         form.send_email()
-        self.object = form.save()
-        return JsonResponse({'message': 'Email address subscribed successfully'}, status=201)
+        return super().form_valid(form)
 
     def form_invalid(self, form):
         return JsonResponse({'message': 'Error occurred while processing input',

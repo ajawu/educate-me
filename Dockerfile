@@ -4,7 +4,7 @@ ADD ./requirements.txt /app/requirements.txt
 RUN set -ex \
     && apt-get update \
     && apt-get install -y python3-pip python3-dev libpq-dev curl build-essential\
-       libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev \
+       libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev \
        libwebp-dev tcl8.6-dev tk8.6-dev python-tk \
     && pip3 install virtualenv \
     && virtualenv env \

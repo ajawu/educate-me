@@ -58,5 +58,5 @@ class Donations(models.Model):
 
 
 class Subscription(models.Model):
-    email = models.EmailField(blank=False)
+    email = models.EmailField(blank=False, unique=True)
     date_joined = models.DateTimeField(auto_now_add=True, blank=True)
