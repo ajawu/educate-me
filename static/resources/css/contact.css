@@ -1,3 +1,25 @@
+.section-title {
+    font-size: 130%;
+}
+
+.main-location {
+    font-weight: 600;
+}
+
+.address-text {
+    width: 100%;
+    font-size: 80%;
+    color: #666;
+    text-align: justify;
+}
+
+.icon-name-container {
+    font-weight: 600;
+    color: #062265;
+    font-size: 85%;
+    margin-bottom: 4px;
+}
+
 .form-text {
     color: #ff0000 !important;
     font-weight: 500;
@@ -18,4 +40,8 @@ label {
 
 .form-control:focus {
     border: 1px solid #f7c33f;
+}
+
+#contact-section {
+    padding: 80px 0 95px;
 }
