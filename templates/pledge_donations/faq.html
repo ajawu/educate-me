@@ -3,7 +3,7 @@
 
 {% block css-files %}
     <link rel="stylesheet" href="{% static 'resources/css/problem-info.css' %}">
-    <link rel="stylesheet" href="{% static 'resources/css/' %}">
+    <link rel="stylesheet" href="{% static 'resources/css/faq.css' %}">
 {% endblock %}
 
 {% block page-title %}
@@ -19,5 +19,191 @@
 {% endblock %}
 
 {% block page-body %}
-
+    <section class="pt-6 pt-md-8 pb-8 mb-md-8" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Card -->
+                <div class="card shadow-light-lg accordion" id="helpAccordionTwo">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <!-- Header -->
+                            <div class="d-flex align-items-center">
+                                <div class="mr-auto">
+                                    <!-- Heading -->
+                                    <h4 class="faq-title mb-0">
+                                        FAQ
+                                    </h4>
+                                    <!-- Text -->
+                                    <p class="faq-sub-title font-size-sm text-muted mb-0">
+                                        Issues related to donations, and volunteering
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- / .row -->
+                        </div>
+                        <div class="list-group-item">
+                            <!-- Toggle -->
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                                data-toggle="collapse"
+                                href="#helpFive" role="button" aria-expanded="false" aria-controls="helpFive">
+                                <!-- Title -->
+                                <span class="card-title">
+                                Who can volunteer on Educate Me?
+                                </span>
+                                <!-- Metadata -->
+                                <div class="text-muted ml-auto">
+                                    <!-- Chevron -->
+                                    <span class="collapse-chevron text-muted">
+                                        <ion-icon name="chevron-down-outline" class="chevron-style"></ion-icon>
+                                    </span>
+                                </div>
+                            </a>
+                            <!-- / .row -->
+                            <!-- Collapse -->
+                            <div class="collapse" id="helpFive" data-parent="#helpAccordionTwo">
+                                <div>
+                                    <!-- Text -->
+                                    <p class="card-body">
+                                        Any person over 18 years old with valid identification, or teenagers between
+                                        13 and 16 years
+                                        old accompanied by a guardian with valid identification.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <!-- Toggle -->
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                                data-toggle="collapse"
+                                href="#helpSix" role="button" aria-expanded="false" aria-controls="helpSix">
+                                <!-- Title -->
+                                <span class="card-title">
+                                What's the maximum amount I can donate?
+                                </span>
+                                <!-- Metadata -->
+                                <div class="text-muted ml-auto">
+                                    <!-- Chevron -->
+                                    <span class="collapse-chevron text-muted">
+                                        <ion-icon name="chevron-down-outline" class="chevron-style"></ion-icon>
+                                    </span>
+                                </div>
+                            </a>
+                            <!-- / .row -->
+                            <!-- Collapse -->
+                            <div class="collapse" id="helpSix" data-parent="#helpAccordionTwo">
+                                <div>
+                                    <!-- Text -->
+                                    <p class="card-body">
+                                        There is no maximum amount :)
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <!-- Toggle -->
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                                data-toggle="collapse"
+                                href="#helpSeven" role="button" aria-expanded="false" aria-controls="helpSeven">
+                                <!-- Title -->
+                                <span class="card-title">
+                                What if I get debited and my donation is not visible?
+                                </span>
+                                <!-- Metadata -->
+                                <div class="text-muted ml-auto">
+                                    <!-- Chevron -->
+                                    <span class="collapse-chevron text-muted">
+                                        <ion-icon name="chevron-down-outline" class="chevron-style"></ion-icon>
+                                    </span>
+                                </div>
+                            </a>
+                            <!-- / .row -->
+                            <!-- Collapse -->
+                            <div class="collapse" id="helpSeven" data-parent="#helpAccordionTwo">
+                                <div>
+                                    <!-- Text -->
+                                    <p class="card-body">
+                                        Send a message to support if the problem persists past 10 minutes with
+                                        no refund made to your bank account
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <!-- Toggle -->
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                                data-toggle="collapse"
+                                href="#helpEight" role="button" aria-expanded="false" aria-controls="helpEight">
+                                <!-- Title -->
+                                <span class="card-title">
+                                How will my donated book be collected?
+                                </span>
+                                <!-- Metadata -->
+                                <div class="text-muted ml-auto">
+                                    <!-- Chevron -->
+                                    <span class="collapse-chevron text-muted">
+                                        <ion-icon name="chevron-down-outline" class="chevron-style"></ion-icon>
+                                    </span>
+                                </div>
+                            </a>
+                            <!-- / .row -->
+                            <!-- Collapse -->
+                            <div class="collapse" id="helpEight" data-parent="#helpAccordionTwo">
+                                <div>
+                                    <!-- Text -->
+                                    <p class="card-body">
+                                        You can send it to any Educate-Me office or drop off centre via courier services
+                                        or if you have a large number of books contact us and we will get them off hands
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group-item">
+                            <!-- Toggle -->
+                            <a class="d-flex align-items-center text-reset text-decoration-none"
+                                data-toggle="collapse"
+                                href="#helpEight" role="button" aria-expanded="false" aria-controls="helpEight">
+                                <!-- Title -->
+                                <span class="card-title">
+                                My question is not here?
+                                </span>
+                                <!-- Metadata -->
+                                <div class="text-muted ml-auto">
+                                    <!-- Chevron -->
+                                    <span class="collapse-chevron text-muted">
+                                        <ion-icon name="chevron-down-outline" class="chevron-style"></ion-icon>
+                                    </span>
+                                </div>
+                            </a>
+                            <!-- / .row -->
+                            <!-- Collapse -->
+                            <div class="collapse" id="helpEight" data-parent="#helpAccordionTwo">
+                                <div>
+                                    <!-- Text -->
+                                    <p class="card-body">
+                                        Contact us directly for any clarification. Visit our
+                                        <a href="{% url 'pledge_donations:contact' %}" class="contact-link">
+                                            contact page
+                                        </a>
+                                        for details on how to contact us.
+                                    </p>
+                                    <div class="d-flex align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- / .row -->
+    </div>
+    <!-- / .container -->
+</section>
 {% endblock %}
